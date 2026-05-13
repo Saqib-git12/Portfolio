@@ -28,12 +28,12 @@ router.post("/", async (req, res) => {
     })
 
   } catch (error) {
-    console.log(error)
+    console.log("CONTACT ERROR ",error)
 
     res.status(500).json({
 
       success: false,
-      message: "Server Error"
+      message: error.message
 
     })
 
