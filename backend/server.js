@@ -62,6 +62,15 @@ const cors = require("cors")
 require("dotenv").config()
 
 const connectDB = require("./config/db")
+app.use(cors({
+  origin:[
+        "http://localhost:5173",
+        "https://portfolio-three-psi-07hf8z2ubq.vercel.app"
+
+  ]
+}))
+
+app.use(express.json())
 
 const contactRoutes = require("./routes/contactRoutes")
 
@@ -74,14 +83,8 @@ connectDB()
 // app.use(cors({
 //   origin:"https://portfolio-three-psi-07hf8z2ubq.vercel.app"
 // }))
-app.use(cors({
-  origin:[
-        "http://localhost:5173",
-        "https://portfolio-three-psi-07hf8z2ubq.vercel.app"
 
-  ]
-}))
-app.use(express.json())
+
 
 app.use("/api/contact", contactRoutes)
 
