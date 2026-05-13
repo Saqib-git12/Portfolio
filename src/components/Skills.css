@@ -1,0 +1,17 @@
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+}
+.skills-list li {
+  background-color: #1e293b;
+  padding: 15px 25px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.skills-list li:hover {
+  background-color: #38bdf8;
+  transform: translateY(-5px);
+}

@@ -1,0 +1,10 @@
+/* @import "tailwindcss"; */
+/* Imports entire Tailwind framework.
+Now Tailwind utility classes become available. */
+
+
+/* To add smooth scrollin */
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
