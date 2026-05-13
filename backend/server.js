@@ -56,12 +56,8 @@
 
 //3
 const express = require("express")
-
 const cors = require("cors")
-
-require("dotenv").config()
-
-const connectDB = require("./config/db")
+const app = express()
 app.use(cors({
   origin:[
         "http://localhost:5173",
@@ -69,12 +65,15 @@ app.use(cors({
 
   ]
 }))
-
+require("dotenv").config()
 app.use(express.json())
-
 const contactRoutes = require("./routes/contactRoutes")
+const connectDB = require("./config/db")
 
-const app = express()
+
+
+
+
 
 connectDB()
 
