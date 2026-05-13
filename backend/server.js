@@ -69,8 +69,18 @@ const app = express()
 
 connectDB()
 
-app.use(cors())
+// app.use(cors())
+//front vercel backend render 
+// app.use(cors({
+//   origin:"https://portfolio-three-psi-07hf8z2ubq.vercel.app"
+// }))
+app.use(cors({
+  origin:[
+        "http://localhost:5173",
+        "https://portfolio-three-psi-07hf8z2ubq.vercel.app"
 
+  ]
+}))
 app.use(express.json())
 
 app.use("/api/contact", contactRoutes)
