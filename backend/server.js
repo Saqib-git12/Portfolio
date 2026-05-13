@@ -55,16 +55,19 @@
 // })
 
 //3
+
+
 const express = require("express")
 const cors = require("cors")
 const app = express()
-app.use(cors({
-  origin:[
-        "http://localhost:5173",
-        "https://portfolio-three-psi-07hf8z2ubq.vercel.app"
+// app.use(cors({
+//   origin:[
+//         "http://localhost:5173",
+//         "https://portfolio-three-psi-07hf8z2ubq.vercel.app"
 
-  ]
-}))
+//   ]
+// }))
+app.use(cors())
 require("dotenv").config()
 app.use(express.json())
 const contactRoutes = require("./routes/contactRoutes")
