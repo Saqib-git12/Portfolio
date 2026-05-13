@@ -103,6 +103,11 @@ const PORT = process.env.PORT || 5000
 app.get("/test",(req,res)=>{
   res.send("NEW Bakckend code working")
 })
+app.get("/cors-test",(req,res)=>{
+  res.json({
+    message:"NEW CORS CODE ACTIVATE"
+  })
+})
 
 app.listen(PORT, () => {
 
