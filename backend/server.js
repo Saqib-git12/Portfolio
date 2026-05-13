@@ -67,7 +67,9 @@ const app = express()
 
 //   ]
 // }))
-app.use(cors())
+app.use(cors({
+  origin:"*"
+}))
 require("dotenv").config()
 app.use(express.json())
 const contactRoutes = require("./routes/contactRoutes")
