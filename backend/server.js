@@ -98,6 +98,10 @@ app.get("/", (req, res) => {
 
 const PORT = process.env.PORT || 5000
 
+app.get("/test",(req,res)=>{
+  res.send("NEW Bakckend code working")
+})
+
 app.listen(PORT, () => {
 
   console.log(`Server running on port ${PORT}`)
